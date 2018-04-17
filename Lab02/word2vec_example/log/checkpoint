@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/koloumpras/Development/AI-Lab/Lab02/word2vec_example/log/model.ckpt"
+all_model_checkpoint_paths: "/home/koloumpras/Development/AI-Lab/Lab02/word2vec_example/log/model.ckpt"
