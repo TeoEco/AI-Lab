@@ -5,7 +5,8 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
 from keras.layers import Embedding
- 
+from keras.utils.vis_utils import plot_model
+
 # generate a sequence from the model
 def generate_seq(model, tokenizer, seed_text, n_words):
 	in_text, result = seed_text, seed_text
@@ -56,6 +57,7 @@ model.add(LSTM(50))
 # IMPORTANT!!
 model.add(Dense(vocab_size, activation='softmax'))
 print(model.summary())
+plot_model(model, to_file='predictor_v2_plot.png', show_shapes=True, show_layer_names=True)
 # compile network
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 # fit network
